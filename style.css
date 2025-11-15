@@ -1,0 +1,239 @@
+/* Color Scheme */
+:root{
+  --pearl-cream: #f6efe9;
+  --gold-acc: #f4c2c2;   /* Light Baby Pink for buttons/badges */
+  --gold-strong: #e8a8a8; /* Stronger Pink for links/accents */
+  --navy: #0d2233;
+  --muted: #666;
+}
+
+/* Base */
+body.page-light {
+  background: var(--pearl-cream);
+  color: var(--navy);
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem; /* The new, larger base font size */
+  -webkit-font-smoothing:antialiased;
+  margin:0;
+  padding:0;
+}
+
+/* Font Overrides for Headings (Playfair Display) */
+h1, h2, h5, .display-4, .navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* Hero */
+.hero{
+  min-height: 46vh;
+  /* Correct path to images */
+  background-image: linear-gradient(rgba(13,34,51,0.20), rgba(255,255,255,0.05)), url('../images/image6.jpg');
+  background-position: center;
+  background-size: cover;
+  border-bottom: 1px solid rgba(13,34,51,0.06);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.12);
+}
+
+/* Navbar & brand */
+.navbar{
+  background: transparent;
+  padding: 1rem 1.5rem;
+}
+.brand-pearl { font-weight:700; color: var(--navy); font-size:1.25rem; letter-spacing:0.3px; }
+.brand-dot { color: var(--gold-strong); font-weight:600; }
+
+
+/* Link Colors FIX */
+a {
+  color: var(--gold-strong); /* Default body links are now PINK */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--navy); /* Hover to Navy for contrast */
+  text-decoration: underline;
+}
+
+/* Navbar Links (Kept Navy for readability on light background) */
+/* Enhanced Navigation Links */
+
+/* 1. Base style for all nav links */
+.navbar-nav .nav-link { 
+    color: var(--navy) !important;
+    text-transform: uppercase; /* Elegant uppercase look */
+    letter-spacing: 1.5px; /* Spacing for a refined appearance */
+    font-weight: 500;
+    padding-bottom: 6px; /* Space for the underline */
+    margin: 0 8px; /* Space between links */
+    position: relative; /* Essential for the sliding underline */
+    transition: all 0.2s ease-in-out;
+}
+
+/* 2. Create the sliding underline on hover (The "creative" part) */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%; 
+    width: 0;
+    height: 2px;
+    background-color: var(--gold-strong); /* Baby Pink line */
+    transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+/* 3. Expand the underline on hover/active state */
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+/* 4. Cart Link Emphasis */
+.cart-link {
+    font-weight: 700;
+    /* The underline effect will still work here, no special hover needed */
+}
+
+/* Buttons */
+.btn-gold, .badge-gold { 
+    background: var(--gold-acc); 
+    color: var(--navy); 
+    border-radius: 40px; 
+    padding: .5rem 1rem; 
+    border: 2px solid var(--gold-strong); /* Added border */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease-in-out; 
+}
+.btn-gold:hover {
+    background: var(--gold-strong); 
+    color: #fff !important; 
+    transform: translateY(-2px); 
+    box-shadow: 0 5px 15px rgba(232, 168, 168, 0.5); 
+}
+/* Style for small buttons */
+.btn-gold.btn-sm {
+    padding: 0.35rem 0.8rem; /* Tighter padding for smaller size */
+    font-size: 0.9rem;
+}
+.btn-outline-light { border-color: rgba(255,255,255,0.7); color: #fff; }
+
+/* Cards */
+.card { 
+    border-radius: 12px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Added subtle shadow */
+    border: 1px solid #f0f0f0; /* Added light border */
+}
+.featured-card img { 
+    height: 220px; 
+    object-fit: cover; 
+}
+
+/* Products */
+.product-card { margin-bottom: 1.25rem; }
+.product-card .card-body { padding: 1rem; }
+.price { font-weight: 700; color: var(--navy); }
+.small-muted { color: #777; font-size: .95rem; margin-bottom: 0.5rem; }
+
+/* Form & controls */
+.custom-select { 
+    border-radius: 30px; 
+    padding: .25rem .75rem; 
+    border: 1px solid var(--gold-strong); /* Pink border */
+    background-color: var(--pearl-cream); /* Light background */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    cursor: pointer; 
+}
+.add-btn { border-radius: 40px; }
+
+/* NEW: Fancy Contact Form Text Boxes */
+.contact-form .form-control {
+    border-radius: 30px; 
+    border: 1px solid var(--gold-strong);
+    background-color: var(--pearl-cream);
+    padding: 1.25rem 1rem; /* Make them a bit taller */
+    font-family: 'Inter', sans-serif; /* Ensure standard font */
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+.contact-form .form-control:focus {
+    background-color: #fff;
+    border-color: var(--navy);
+    box-shadow: 0 0 5px rgba(232, 168, 168, 0.5); 
+}
+.contact-form textarea.form-control {
+    border-radius: 20px; /* Textarea looks better less rounded */
+}
+
+
+/* Cart */
+.cart-row { display:flex; align-items:center; justify-content:space-between; padding:.75rem; border-bottom:1px solid rgba(0,0,0,0.04); }
+.cart-item { display:flex; gap:1rem; align-items:center; }
+.cart-thumb { 
+    width:80px; 
+    height:60px; 
+    object-fit:cover; 
+    border-radius:6px; 
+    border: 2px solid var(--gold-strong); /* Pink Border */
+}
+
+/* Footer */
+.footer { background: transparent; color: var(--muted); }
+
+/* Responsive */
+@media (max-width: 576px){
+  .hero { min-height: 36vh; }
+  .brand-pearl { font-size: 1rem; }
+  .cart-row { flex-direction: column; align-items:flex-start; gap:.5rem; }
+}
+
+/* Print styles (for Print Summary) */
+@media print {
+  body { background: #fff; color: #000; }
+  nav, footer, .btn, .custom-select { display: none !important; }
+  #cartContents { margin: 0; }
+  .cart-row { page-break-inside: avoid; border: none; }
+}
+
+/* Custom Elegant Accent Font Style (Cormorant Garamond) */
+.cute-text {
+    font-family: 'Cormorant Garamond', serif; 
+    font-size: 1.8rem; 
+    color: var(--navy); 
+    line-height: 1.4;
+    font-weight: 500; 
+    font-style: italic; 
+}
+
+/* Fix for the bullet list margin and font weight */
+.cute-text li {
+    font-weight: 500; 
+    margin-bottom: 0.5rem;
+}
+/* Override size for description text inside product cards */
+.product-card .cute-text {
+    font-size: 1rem !important; 
+    font-weight: 500; 
+    font-style: italic; 
+    color: var(--navy); 
+}
+
+/* NEW: Override for contact details to make them readable */
+.contact-form-details .cute-text {
+    font-size: 1.1rem !important;
+    line-height: 1.6;
+    font-style: normal; /* Make it upright for readability */
+}
+
+/* Custom Fix: Ensure Print Summary button has a fixed width, but allow others to size normally */
+#cartSummaryAndActions #printBtn {
+    min-width: 180px; 
+    text-align: center;
+}
