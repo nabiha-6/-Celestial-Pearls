@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Collections — Celestial Pearls</title>
+  <meta name="description" content="Shop necklaces, bracelets, earrings and luxury sets at Celestial Pearls." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,700&family=Inter:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../src/css/style.css">
+</head>
+<body class="page-light">
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="index.html"><span class="brand-pearl">Celestial</span><span class="brand-dot">&nbsp;Pearls</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMain2" aria-expanded="false">☰</button>
+    <div class="collapse navbar-collapse" id="navMain2">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item active"><a class="nav-link" href="products.html">Collections</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link cart-link" href="cart.html">Cart <span id="cartCountTop" class="badge badge-pill badge-gold" aria-live="polite">0</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="contactme.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2>Collections</h2>
+      <div>
+        <label for="sectionSelect" class="mr-2">Section:</label>
+        <select id="sectionSelect" class="custom-select w-auto" aria-label="Choose product section">
+          <option value="necklaces">Necklaces</option>
+          <option value="bracelets">Bracelets</option>
+          <option value="earrings">Earrings</option>
+          <option value="sets">Sets</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="productsRow" class="row" aria-live="polite"></div>
+
+    <div class="mt-4">
+      <button id="viewCartBtn" class="btn btn-gold">View Cart</button>
+    </div>
+  </main>
+
+  <footer class="footer py-4">
+    <div class="container text-center"><small>© <span id="year2"></span> Celestial Pearls</small></div>
+  </footer>
+
+  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script src="../src/js/script.js"></script>
+</body>
+</html>

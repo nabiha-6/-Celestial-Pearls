@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Celestial Pearls — Chic Pearl Jewelry</title>
+  <meta name="description" content="Celestial Pearls — curated pearl jewelry. Classic studs, bracelets, necklaces and luxury sets." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,700&family=Inter:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../src/css/style.css">
+</head>
+<body class="page-light">
+  <nav class="navbar navbar-expand-lg" role="navigation" aria-label="Main navigation">
+    <a class="navbar-brand" href="index.html">
+      <span class="brand-pearl">Celestial</span><span class="brand-dot">&nbsp;Pearls</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+      ☰
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html">Collections</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link cart-link" href="cart.html">Cart <span id="cartCount" class="badge badge-pill badge-gold" aria-live="polite">0</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="contactme.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero d-flex align-items-center" role="banner">
+    <div class="container text-center text-white">
+      <h1 class="display-4">Celestial Pearls</h1>
+     <p class="lead cute-text">A boutique crafted from passion, heritage & timeless elegance.</p>
+      <a href="products.html" class="btn btn-outline-light btn-lg" role="button">Shop Collections</a>
+    </div>
+  </header>
+
+  <main class="container my-5" role="main">
+    <section class="row">
+      <div class="col-md-6">
+        <h2>Signature Pieces</h2>
+        <p class="cute-text">Hand-picked pearls, gold accents, and refined designs — perfect for gifting or daily elegance.</p>
+        <ul class="cute-text">
+          <li>Authentic Akoya & South Sea pearls</li>
+          <li>Certificate of authenticity with each purchase</li>
+          <li>Local delivery available</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <div class="card border-0 shadow-sm featured-card" aria-hidden="false">
+          <img src="../src/images/image3.jpg" alt="Multi-Strand Pearl Necklace" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Multi-Strand Necklace</h5>
+            <p class="card-text cute-text">Three strands of graduated South Sea pearls with 18k gold clasp.</p>
+            <a href="products.html" class="btn btn-gold">View Collection</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer py-4" role="contentinfo">
+    <div class="container text-center">
+      <small>© <span id="year"></span> Celestial Pearls • Designed by Nabiha and Almas</small>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script src="../src/js/script.js"></script>
+</body>
+</html>
